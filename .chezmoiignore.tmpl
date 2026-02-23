@@ -1,7 +1,8 @@
 .gitignore
 LICENSE
 README.md
+.config/nvim/lazy-lock.json
 
 {{ if ne .chezmoi.hostname "BoomerMachine" }}
-sink-make-LFE.conf
+.config/pipewire/pipewire.conf.d/sink-make-LFE.conf
 {{ end }}
