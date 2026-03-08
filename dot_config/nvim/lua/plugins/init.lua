@@ -16,15 +16,16 @@ return {
   -- test new blink
   -- { import = "nvchad.blink.lazyspec" },
 
-  -- {
-  -- 	"nvim-treesitter/nvim-treesitter",
-  -- 	opts = {
-  -- 		ensure_installed = {
-  -- 			"vim", "lua", "vimdoc",
-  --      "html", "css"
-  -- 		},
-  -- 	},
-  -- },
+  {
+  	"nvim-treesitter/nvim-treesitter",
+  	opts = {
+  		ensure_installed = {
+  			"vim", "lua", "vimdoc", "html", "css", "go", "gotmpl"
+  		},
+      sync_install = true,
+  	}
+  },
+
   {
     "lervag/vimtex",
     lazy = false, -- we don't want to lazy load VimTeX

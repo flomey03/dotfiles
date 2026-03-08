@@ -1,6 +1,12 @@
 $pdf_mode = 1;
 @default_files = ('main.tex');
+
+{{ if eq .chezmoi.hostname "BoomerMachine" }}
 $pdf_previewer = 'okular %S';
+{{ else if eq .chezmoi.hostname "BoomerLaptop" }}
+$pdf_previewer = 'evince %S';
+{{ end }}
+
 $aux_dir = 'build';
 $pdflatex = 'pdflatex -interaction=nonstopmode -shell-escape %O %S';
 
