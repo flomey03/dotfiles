@@ -21,3 +21,7 @@ map("n", "<leader>dh", function()
 	vim.diagnostic.enable(not is_enabled)
 	print("Diagnostics: " .. (is_enabled and "OFF" or "ON"))
 end, { desc = "Toggle diagnostic highlights" })
+
+map("n", "ca", function()
+vim.lsp.buf.code_action()
+end, { desc = "LSP Code Action" })
