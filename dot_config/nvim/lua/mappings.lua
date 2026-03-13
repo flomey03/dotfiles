@@ -1,4 +1,4 @@
-require "nvchad.mappings"
+require("nvchad.mappings")
 
 -- add yours here
 
@@ -15,3 +15,9 @@ map("n", "<leader>le", ":VimtexErrors<CR>", { desc = "VimTeX: Fehlerliste öffne
 map("n", "<leader>lc", ":VimtexClean<CR>", { desc = "VimTeX: Temp-Dateien löschen" })
 map("n", "<leader>ls", ":VimtexStop<CR>", { desc = "VimTeX: Compiler stoppen" })
 map("n", "<leader>li", ":VimtexInfo<CR>", { desc = "VimTeX: Status Info" })
+
+map("n", "<leader>dh", function()
+	local is_enabled = vim.diagnostic.is_enabled()
+	vim.diagnostic.enable(not is_enabled)
+	print("Diagnostics: " .. (is_enabled and "OFF" or "ON"))
+end, { desc = "Toggle diagnostic highlights" })
