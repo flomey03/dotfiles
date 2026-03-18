@@ -12,8 +12,11 @@ $pdflatex = 'pdflatex -interaction=nonstopmode -shell-escape %O %S';
 
 add_cus_dep( 'drawio', 'pdf', 0, 'drawio2pdf' );
 sub drawio2pdf {
-    system("drawio --export --format pdf --crop --no-sandbox --output $_[0].pdf $_[0].drawio");
+    system("drawio --export --all-pages --format pdf --crop --no-sandbox --output $_[0].pdf $_[0].drawio");
    }
+
+$cleanup_includes_cusdep_generated = 1;
+$cleanup_includes_generated = 1;
 
 # Hilft latexmk, die Abhängigkeiten besser zu tracken
 push @generated_exts, 'pdf';
