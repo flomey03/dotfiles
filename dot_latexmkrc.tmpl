@@ -10,3 +10,10 @@ $pdf_previewer = 'evince %S';
 $aux_dir = 'build';
 $pdflatex = 'pdflatex -interaction=nonstopmode -shell-escape %O %S';
 
+add_cus_dep( 'drawio', 'pdf', 0, 'drawio2pdf' );
+sub drawio2pdf {
+    system("drawio --export --format pdf --crop --no-sandbox --output $_[0].pdf $_[0].drawio");
+   }
+
+# Hilft latexmk, die Abhängigkeiten besser zu tracken
+push @generated_exts, 'pdf';
