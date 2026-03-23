@@ -6,6 +6,8 @@ let g:netrw_browse_split = 4 " open in previous window
 let g:netrw_altv = 1         " open splits to the right
 let g:netrw_winsize = 25     " tree takes 25% of the screen
 
+colorscheme habamax
+
 " Use Ctrl + hjkl to move between splits
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
