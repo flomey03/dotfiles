@@ -109,6 +109,7 @@ setopt HIST_IGNORE_ALL_DUPS
 alias cz='chezmoi'
 alias sudo='sudo '
 alias pacdiff='sudo MERGEPROG=meld DIFFPROG=meld pacdiff '
-alias del='gio trash'
+alias del='trash-put'
+alias lis='trash-list'
+alias res='trash-restore'
 eval "$(zoxide init zsh)"
-
