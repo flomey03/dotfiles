@@ -2,9 +2,9 @@
 	email = meyer.florian.janis@icloud.com
 	name = Florian Meyer
 [diff]
-	tool = meld
+	tool = nvim
 [merge]
-	tool = meld
+	tool = nvim
 [core]
 	pager = less -SFX
 [credential]
