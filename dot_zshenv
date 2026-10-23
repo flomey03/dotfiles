@@ -1,2 +1,4 @@
 export CHROME_EXECUTABLE="firefox"
 export EDITOR=nvim
+export MERGEPROG=nvim
+export DIFFPROG=nvim
